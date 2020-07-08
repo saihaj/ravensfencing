@@ -1,22 +1,14 @@
 /* eslint-disable react/require-default-props */
-import { useStaticQuery, graphql } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
+import { arrayOf, string, shape } from 'prop-types'
 import { Helmet } from 'react-helmet'
+import { useSiteMetadata } from '../hooks'
 
-function SEO( { description, lang, meta, keywords, title } ) {
-  const { site } = useStaticQuery( graphql`
-    query DefaultSEOQuery {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-        }
-      }
-    }
-  ` )
-  const metaDescription = description || site.siteMetadata.description
+const SEO = ( { description, lang, meta, keywords, title } ) => {
+  const site = useSiteMetadata()
+
+  const metaDescription = description || site.description
+
   return (
     <Helmet
       htmlAttributes={{
@@ -44,10 +36,6 @@ function SEO( { description, lang, meta, keywords, title } ) {
           content: 'summary',
         },
         {
-          name: 'twitter:creator',
-          content: site.siteMetadata.author,
-        },
-        {
           name: 'twitter:title',
           content: title,
         },
@@ -66,7 +54,7 @@ function SEO( { description, lang, meta, keywords, title } ) {
         )
         .concat( meta )}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${site.title}`}
     />
   )
 }
@@ -76,12 +64,13 @@ SEO.defaultProps = {
   keywords: [],
   meta: [],
 }
+
 SEO.propTypes = {
-  description: PropTypes.string,
-  keywords: PropTypes.arrayOf( PropTypes.string ),
-  lang: PropTypes.string,
-  // eslint-disable-next-line react/forbid-prop-types
-  meta: PropTypes.array,
-  title: PropTypes.string.isRequired,
+  description: string,
+  keywords: arrayOf( string ),
+  lang: string,
+  meta: arrayOf( shape( {} ) ),
+  title: string.isRequired,
 }
+
 export default SEO

@@ -8,7 +8,6 @@ module.exports = {
   siteMetadata: {
     title: 'Ravens Fencing',
     description: 'The Carleton University Fencing Club',
-    author: '@saihaj',
   },
   plugins: [
     'gatsby-plugin-eslint',

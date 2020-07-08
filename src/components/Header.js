@@ -1,20 +1,12 @@
 import React, { useState } from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import cx from 'classnames'
 import navRoutes from '../nav.yml'
+import { useSiteMetadata } from '../hooks'
 
 const Header = () => {
   const [ isExpanded, toggleExpansion ] = useState( false )
-
-  const { site: { siteMetadata: { title } } } = useStaticQuery( graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  ` )
+  const { title } = useSiteMetadata()
 
   return (
     <header className="bg-red-600">

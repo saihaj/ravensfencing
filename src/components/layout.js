@@ -1,11 +1,14 @@
 import React from 'react'
-import { node } from 'prop-types'
+import { node, string, arrayOf } from 'prop-types'
 
 import Header from './Header'
 import Footer from './Footer'
+import SEO from './Seo'
 
-const Layout = ( { children } ) => (
+const Layout = ( { children, seoTitle, seoKeywords } ) => (
+
   <div className="flex flex-col min-h-screen font-sans text-white bg-black">
+    <SEO title={seoTitle} keywords={seoKeywords} />
 
     <Header />
 
@@ -20,6 +23,12 @@ const Layout = ( { children } ) => (
 
 Layout.propTypes = {
   children: node.isRequired,
+  seoTitle: string.isRequired,
+  seoKeywords: arrayOf( string ),
+}
+
+Layout.defaultProps = {
+  seoKeywords: [],
 }
 
 export default Layout
