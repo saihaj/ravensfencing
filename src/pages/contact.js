@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 const ContactPage = () => (
   <Layout seoKeywords={[ 'gatsby', 'tailwind', 'react', 'tailwindcss' ]} seoTitle="Contact">
