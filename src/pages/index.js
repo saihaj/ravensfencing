@@ -1,6 +1,8 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
+import NewsBox from '../components/NewsBox'
+
 import catAndHumanIllustration from '../images/cat-and-human-illustration.svg'
 
 const IndexPage = () => (
@@ -30,6 +32,27 @@ const IndexPage = () => (
         , a utility-first CSS framework.
       </p>
     </section>
+
+    <section className="text-gray-600 body-font">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="flex flex-wrap -m-4">
+
+          <div className="p-4 md:w-1/3">
+            <NewsBox newsTitle="fasdkfj;" permalink="news" excerpt="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+          </div>
+
+          <div className="p-4 md:w-1/3">
+            <NewsBox newsTitle="Testing" permalink="news" excerpt="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+          </div>
+
+          <div className="p-4 md:w-1/3">
+            <NewsBox newsTitle="Testing" permalink="news" excerpt="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </Layout>
 )
 
