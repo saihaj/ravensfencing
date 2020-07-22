@@ -44,12 +44,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        tailwind: true,
-        develop: true,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-purgecss',
+    //   options: {
+    //     tailwind: true,
+    //     develop: true,
+    //   },
+    // },
   ],
 }
