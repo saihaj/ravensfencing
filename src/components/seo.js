@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import React from 'react'
 import { arrayOf, string, shape } from 'prop-types'
 import { Helmet } from 'react-helmet'
@@ -59,18 +58,19 @@ const SEO = ( { description, lang, meta, keywords, title } ) => {
   )
 }
 
-SEO.defaultProps = {
-  lang: 'en',
-  keywords: [],
-  meta: [],
-}
-
 SEO.propTypes = {
   description: string,
   keywords: arrayOf( string ),
   lang: string,
   meta: arrayOf( shape( {} ) ),
   title: string.isRequired,
+}
+
+SEO.defaultProps = {
+  description: null,
+  lang: 'en',
+  keywords: [],
+  meta: [],
 }
 
 export default SEO
