@@ -38,7 +38,16 @@ ImageBox.propTypes = {
 const Programs = () => {
   const { allFile: { edges: images } } = useStaticQuery( graphql`
     query ProgramPageImages {
-      allFile(filter: {sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "programs"}}) {
+      allFile(
+        filter: {
+          sourceInstanceName: {eq: "images"},
+          relativeDirectory: {eq: "programs"}
+          },
+          sort: {
+            fields: name,
+            order: ASC
+          }
+        ) {
         edges {
           node {
             id
