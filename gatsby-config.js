@@ -44,6 +44,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+    },
     // {
     //   resolve: 'gatsby-plugin-purgecss',
     //   options: {
