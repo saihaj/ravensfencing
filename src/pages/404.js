@@ -1,18 +1,22 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import abductionIllustration from '../images/abduction-illustration.svg'
+import engarde from '../images/engarde.svg'
 
 const NotFoundPage = () => (
-  <Layout seoTitle="404: Not found">
-    <div>
+  <Layout
+    seoTitle="404: Not found"
+    customStyles="flex items-center"
+    seoKeywords={[ 'Not found', '404 Page', 'Resource not found' ]}
+  >
+    <div className="flex flex-col">
       <img
-        alt="Ghost getting abducted by aliens"
-        className="block mx-auto w-1/2"
-        src={abductionIllustration}
+        alt="Engarde"
+        className="block mx-auto w-11/12 md:w-4/6 md:mt-0 -mt-40"
+        src={engarde}
       />
-      <h2 className="bg-yellow-200 text-2xl font-bold inline-block my-8 p-3">
-        Looks like this page is a ghost that got abducted by aliens...
+      <h2 className="text-xl text-center font-bold inline-block">
+        Looks like the page you were searching for does not exist...
       </h2>
     </div>
   </Layout>
