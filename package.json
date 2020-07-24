@@ -27,7 +27,6 @@
     "title": "^3.4.2"
   },
   "devDependencies": {
-    "@tailwindcss/custom-forms": "0.2.1",
     "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "9.8.4",
     "babel-eslint": "^10.1.0",
