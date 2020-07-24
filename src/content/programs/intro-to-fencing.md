@@ -1,7 +1,6 @@
 ---
 title: Intro to Fencing
 layout: Default
-permalink: programs/intro-to-fencing
 keywords: Intro to fencing program, Learn to fence, Beginner fencing
 ---
 

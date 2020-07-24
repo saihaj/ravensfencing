@@ -1,7 +1,6 @@
 ---
 title: Regular Practice
 layout: Default
-permalink: programs/regular-practice
 keywords: CUFC Practice Time, Foil, Sabre, Epee, Ravens fencing practice
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Varsity
 layout: Default
-permalink: programs/varsity
 keywords: Varsity Team, goravens, OUA fencing
 ---
 

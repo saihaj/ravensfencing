@@ -1,7 +1,6 @@
 ---
 title: Membership 2019-2020
 layout: Default
-permalink: membership
 keywords: CUFC Club membership, 2019-2020 season ,Season pricing, Ravens fencing club membership
 ---
 
