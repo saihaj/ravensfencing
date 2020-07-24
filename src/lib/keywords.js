@@ -19,3 +19,13 @@ export const notFoundKeywords = [
   '404 Page',
   'Resource not found',
 ]
+
+export const newsKeywords = [
+  ...BASE_KEYWORDS,
+  'Latest Varsity Team News',
+  'Fencing update',
+  'Ottawa fencing club news',
+  'CU Fencing Team new',
+  'More about fencing',
+  'New Fencing events Ottawa',
+]
