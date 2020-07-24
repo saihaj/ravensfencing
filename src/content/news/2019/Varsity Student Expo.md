@@ -1,7 +1,6 @@
 ---
 title: Varsity Student Expo
 layout: News
-permalink: testt
 author: Joomla! Administrator
 date: 2019-09-03 #YYYY-MM-DD
 category: General

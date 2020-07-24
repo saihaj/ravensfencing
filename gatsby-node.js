@@ -2,19 +2,6 @@ const { createFilePath } = require( 'gatsby-source-filesystem' )
 const path = require( 'path' )
 const slugify = require( 'slugify' )
 
-exports.createSchemaCustomization = ( { actions } ) => {
-  const { createTypes } = actions
-  const typeDefs = `
-    type MarkdownRemark implements Node {
-      frontmatter: Frontmatter
-    }
-    type Frontmatter {
-      permalink: String
-    }
-  `
-  createTypes( typeDefs )
-}
-
 // Add slug for each mdx file in 'content'
 exports.onCreateNode = ( { node, actions, getNode } ) => {
   const { createNodeField } = actions
@@ -44,7 +31,6 @@ exports.createPages = async ( { actions, graphql, reporter } ) => {
           }
           frontmatter {
             layout
-            permalink
           }
         }
       }
@@ -61,13 +47,12 @@ exports.createPages = async ( { actions, graphql, reporter } ) => {
     .filter( ( { node: { frontmatter: { layout } } } ) => layout )
     .forEach( ( { node: {
       id,
-      frontmatter,
+      frontmatter: { layout },
       fields: { slug },
     } } ) => {
-      const pageLink = frontmatter.permalink || slug
       createPage( {
-        path: pageLink,
-        component: path.resolve( `src/templates/${frontmatter.layout}.js` ),
+        path: slug,
+        component: path.resolve( `src/templates/${layout}.js` ),
         context: { id },
       } )
     } )

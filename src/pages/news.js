@@ -37,7 +37,6 @@ const News = () => {
             slug
           }
           frontmatter {
-            permalink
             title
           }
         }
@@ -55,14 +54,14 @@ const News = () => {
           {data.map( ( { node: {
             id,
             excerpt,
-            frontmatter,
+            frontmatter: { title },
             fields: { slug },
           } } ) => (
             <NewsListing
               key={id}
-              title={frontmatter.title}
+              title={title}
               excerpt={excerpt}
-              permalink={frontmatter.permalink || slug}
+              permalink={slug}
             />
           ) )}
 
