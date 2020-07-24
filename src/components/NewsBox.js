@@ -15,7 +15,7 @@ const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
       <div className="flex items-center flex-wrap ">
 
         <Link
-          to={permalink}
+          to={`/${permalink}`}
           className="text-red-600 inline-flex items-center md:mb-2 lg:mb-0"
         >
           Learn More
