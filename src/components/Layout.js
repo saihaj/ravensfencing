@@ -8,7 +8,7 @@ import SEO from './Seo'
 
 const Layout = ( { children, seoTitle, seoKeywords, customStyles } ) => (
 
-  <div className="flex flex-col min-h-screen font-sans text-white bg-black">
+  <div className="flex flex-col min-h-screen font-sans">
     <SEO title={seoTitle} keywords={seoKeywords} />
 
     <Header />
