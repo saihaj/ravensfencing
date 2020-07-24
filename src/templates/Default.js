@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { shape } from 'prop-types'
 
 import Layout from '../components/Layout'
+import { BASE_KEYWORDS } from '../lib/keywords'
 
 export const query = graphql`
   query DefaultPageLayout($id: String ) {
@@ -25,7 +26,7 @@ const Template = ( {
     },
   },
 } ) => (
-  <Layout seoTitle={title} seoKeywords={[ keywords ]}>
+  <Layout seoTitle={title} seoKeywords={[ ...BASE_KEYWORDS, keywords ]}>
     <div className="prose mx-auto" dangerouslySetInnerHTML={{ __html: html }} />
   </Layout>
 )

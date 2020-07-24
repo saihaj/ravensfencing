@@ -2,7 +2,7 @@
 title: Intro to Fencing
 layout: Default
 permalink: programs/intro-to-fencing
-keywords: Fencing, Carleton University
+keywords: Intro to fencing program, Learn to fence, Beginner fencing
 ---
 
 ## Interested in learning how to fence but have never tried it before?  Then our 'Introduction to Fencing' course is exactly what you are looking for!  

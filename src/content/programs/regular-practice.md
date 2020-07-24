@@ -2,7 +2,7 @@
 title: Regular Practice
 layout: Default
 permalink: programs/regular-practice
-keywords: Fencing, Carleton University, Practice, Foil, Sabre, Epee, CUFC
+keywords: CUFC Practice Time, Foil, Sabre, Epee, Ravens fencing practice
 ---
 
 # Practice Schedule 2019-2020

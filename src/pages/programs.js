@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { shape, string } from 'prop-types'
 
 import { processTitle, toSlug } from '../lib/utils'
+import { programKeywords } from '../lib/keywords'
 import Layout from '../components/Layout'
 
 const ImageBox = ( { name, image } ) => (
@@ -64,7 +65,7 @@ const Programs = () => {
   ` )
 
   return (
-    <Layout seoTitle="Programs">
+    <Layout seoTitle="Programs" seoKeywords={programKeywords}>
 
       <section
         className="flex flex-wrap flex-col"

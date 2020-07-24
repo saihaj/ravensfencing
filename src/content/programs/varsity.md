@@ -2,7 +2,7 @@
 title: Varsity
 layout: Default
 permalink: programs/varsity
-keywords: Fencing, Carleton University, Varsity, goravens, OUA fencing
+keywords: Varsity Team, goravens, OUA fencing
 ---
 
 # Varsity 

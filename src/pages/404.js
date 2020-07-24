@@ -2,12 +2,13 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 import engarde from '../images/engarde.svg'
+import { notFoundKeywords } from '../lib/keywords'
 
 const NotFoundPage = () => (
   <Layout
     seoTitle="404: Not found"
     customStyles="flex items-center"
-    seoKeywords={[ 'Not found', '404 Page', 'Resource not found' ]}
+    seoKeywords={notFoundKeywords}
   >
     <div className="flex flex-col">
       <img
