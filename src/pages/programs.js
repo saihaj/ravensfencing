@@ -55,7 +55,7 @@ const Programs = () => {
             name
             childImageSharp{
               fluid {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
