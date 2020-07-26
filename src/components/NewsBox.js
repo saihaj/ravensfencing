@@ -2,9 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { string } from 'prop-types'
 import title from 'title'
+import { motion } from 'framer-motion'
 
 const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
-  <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+  <motion.div
+    className="h-full border-2 border-gray-800 rounded-lg overflow-hidden"
+    whileHover={{ scale: 1.01 }}
+  >
 
     <div className="p-6">
 
@@ -16,28 +20,34 @@ const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
 
         <Link
           to={permalink}
-          className="text-red-600 inline-flex items-center md:mb-2 lg:mb-0"
+          className="text-red-600"
         >
-          Learn More
-          <svg
-            className="w-4 h-4 ml-2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+          <motion.div
+            className="inline-flex items-center md:mb-2 lg:mb-0"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <path d="M5 12h14" />
-            <path d="M12 5l7 7-7 7" />
-          </svg>
+            Learn More
+            <svg
+              className="w-4 h-4 ml-2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="M12 5l7 7-7 7" />
+            </svg>
+          </motion.div>
         </Link>
 
       </div>
 
     </div>
 
-  </div>
+  </motion.div>
 )
 
 NewsBox.propTypes = {

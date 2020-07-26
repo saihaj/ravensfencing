@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import cx from 'classnames'
+import { motion } from 'framer-motion'
+import { useWindowWidth } from '@react-hook/window-size'
 
 import navRoutes from '../nav.yml'
 import { useSiteMetadata } from '../hooks'
@@ -8,6 +10,12 @@ import { useSiteMetadata } from '../hooks'
 const Header = () => {
   const [ isExpanded, toggleExpansion ] = useState( false )
   const { title } = useSiteMetadata()
+  const width = useWindowWidth()
+
+  useEffect( () => {
+    // Not mobile then toggle cannot be expanded
+    if ( width > 768 ) toggleExpansion( false )
+  }, [ width ] )
 
   return (
     <header className="bg-red-600">
@@ -15,21 +23,27 @@ const Header = () => {
       <nav className="max-w-6xl flex flex-wrap items-center justify-between px-5 py-3 md:px-10 mx-auto">
 
         <Link to="/">
-          <h1 className="flex items-center text-white no-underline mb-2 md:mb-0">
+          <motion.h1
+            className="flex items-center text-white no-underline mb-2 md:mb-0"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <span className="text-2xl font-bold tracking-tight">
               {title}
             </span>
-          </h1>
+          </motion.h1>
         </Link>
 
         {/* Mobile Menu Button */}
-        <button
+        <motion.button
           type="button"
           className={cx(
             'flex items-center block px-3 py-2 text-white rounded md:hidden',
             'hover:bg-white hover:text-red-600',
           )}
           onClick={() => toggleExpansion( !isExpanded )}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           <svg
             className="w-4 h-4 fill-current"
@@ -39,7 +53,7 @@ const Header = () => {
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
-        </button>
+        </motion.button>
 
         {/* Nav items */}
         <div
@@ -60,7 +74,16 @@ const Header = () => {
               key={title}
               to={route}
             >
-              {title}
+
+              { !isExpanded && (
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                {title}
+              </motion.div>
+              )}
+
+              {/* Mobile  */}
+              { isExpanded && <div>{title}</div> }
+
             </Link>
           ) )}
 
