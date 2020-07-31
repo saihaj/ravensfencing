@@ -4,6 +4,16 @@ module.exports = {
     './src/**/*.js',
   ],
   theme: {
+    extend: {
+      colors: {
+        primary: {
+          red: '#cf112d',
+        },
+        secondary: {
+          grey: '#4D4D4D',
+        },
+      },
+    },
     typography: theme => ( {
       default: {
         css: {
@@ -22,7 +32,7 @@ module.exports = {
             color: '#ffffff',
           },
           a: {
-            color: theme( 'colors.red.600' ),
+            color: theme( 'colors.primary.red' ),
             textDecoration: 'none',
             fontWeight: 500,
             '&:hover': {

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
   <motion.div
-    className="h-full border-2 border-gray-800 rounded-lg overflow-hidden"
+    className="h-full border-2 border-secondary-grey rounded-lg overflow-hidden"
     whileHover={{ scale: 1.01 }}
   >
 
@@ -16,11 +16,11 @@ const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
 
       <p className="leading-relaxed mb-3">{excerpt}</p>
 
-      <div className="flex items-center flex-wrap ">
+      <div className="flex items-center flex-wrap">
 
         <Link
           to={permalink}
-          className="text-red-600"
+          className="text-primary-red"
         >
           <motion.div
             className="inline-flex items-center md:mb-2 lg:mb-0"

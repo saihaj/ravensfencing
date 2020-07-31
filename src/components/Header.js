@@ -18,7 +18,7 @@ const Header = () => {
   }, [ width ] )
 
   return (
-    <header className="bg-red-600">
+    <header className="bg-primary-red">
 
       <nav className="max-w-6xl flex flex-wrap items-center justify-between px-5 py-3 md:px-10 mx-auto">
 
@@ -39,7 +39,7 @@ const Header = () => {
           type="button"
           className={cx(
             'flex items-center block px-3 py-2 text-white rounded md:hidden',
-            'hover:bg-white hover:text-red-600',
+            'hover:bg-white hover:text-primary-red',
           )}
           onClick={() => toggleExpansion( !isExpanded )}
           whileHover={{ scale: 1.1 }}
