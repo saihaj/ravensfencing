@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import NewsBox from '../components/NewsBox'
 import SlideShow from '../components/SlideShow'
+import TwitterFeed from '../components/TwitterFeed'
 import { BASE_KEYWORDS } from '../lib/keywords'
 
 const IndexPage = () => {
@@ -84,6 +85,10 @@ const IndexPage = () => {
 
           </div>
         </div>
+      </section>
+
+      <section className=" py-12">
+        <TwitterFeed userName="RavensFencing" />
       </section>
 
     </Layout>
