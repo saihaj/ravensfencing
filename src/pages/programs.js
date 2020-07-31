@@ -2,13 +2,18 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { shape, string } from 'prop-types'
+import { motion } from 'framer-motion'
 
 import { processTitle, toSlug } from '../lib/utils'
 import { programKeywords } from '../lib/keywords'
 import Layout from '../components/Layout'
 
 const ImageBox = ( { name, image } ) => (
-  <div className="lg:w-3/5 md:w-9/12 w-5/6 pb-12 mx-auto">
+  <motion.div
+    className="lg:w-3/5 md:w-9/12 w-5/6 pb-12 mx-auto"
+    whileHover={{ scale: 1.03 }}
+    whileTap={{ scale: 0.95 }}
+  >
 
     <Link to={toSlug( processTitle( name ) )}>
 
@@ -28,7 +33,7 @@ const ImageBox = ( { name, image } ) => (
 
     </Link>
 
-  </div>
+  </motion.div>
 )
 
 ImageBox.propTypes = {
