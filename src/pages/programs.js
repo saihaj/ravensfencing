@@ -54,8 +54,8 @@ const Programs = () => {
             id
             name
             childImageSharp{
-              fluid {
-                ...GatsbyImageSharpFluid_tracedSVG
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
