@@ -5,7 +5,7 @@ import { shape, string } from 'prop-types'
 import { motion } from 'framer-motion'
 
 import { processTitle, toSlug } from '../lib/utils'
-import { programKeywords } from '../lib/keywords'
+import { tournamentsKeywords } from '../lib/keywords'
 import Layout from '../components/Layout'
 
 const ImageBox = ( { name, image } ) => (
@@ -41,13 +41,13 @@ ImageBox.propTypes = {
   name: string.isRequired,
 }
 
-const Programs = () => {
+const Tournaments = () => {
   const { allFile: { edges: images } } = useStaticQuery( graphql`
-    query ProgramPageImages {
+    query TournamentsPageImages {
       allFile(
         filter: {
           sourceInstanceName: {eq: "images"},
-          relativeDirectory: {eq: "programs"}
+          relativeDirectory: {eq: "tournaments"}
           },
           sort: {
             fields: name,
@@ -70,9 +70,9 @@ const Programs = () => {
   ` )
 
   return (
-    <Layout seoTitle="Programs" seoKeywords={programKeywords}>
+    <Layout seoTitle="Tournaments" seoKeywords={tournamentsKeywords}>
 
-      <section className="flex flex-wrap flex-col">
+      <section className="flex flex-col">
 
         {images.map( (
           { node: { id, name, childImageSharp: { fluid } } },
@@ -86,4 +86,4 @@ const Programs = () => {
   )
 }
 
-export default Programs
+export default Tournaments

@@ -29,3 +29,15 @@ export const newsKeywords = [
   'More about fencing',
   'New Fencing events Ottawa',
 ]
+
+export const tournamentsKeywords = [
+  ...BASE_KEYWORDS,
+  'AP Simon Cup',
+  'Carleton Invitational',
+  'goravens',
+  'en-garde, pret, allez',
+]
+
+export const SpecialTitleWords = [
+  'The ApSimon Cup',
+]

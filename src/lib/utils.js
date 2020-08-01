@@ -1,4 +1,5 @@
 import title from 'title'
+import { SpecialTitleWords } from './keywords'
 
 /**
  * Remove digits from a string
@@ -11,10 +12,16 @@ export const removeNum = input => input.replace( /\d+/g, '' )
 /**
  *
  * @param {String} input
+ * Special processing for some words should go
  * @returns Input without digits and proper title
  */
 
-export const processTitle = input => removeNum( title( input ) )
+export const processTitle = input => removeNum(
+  title(
+    input,
+    { special: SpecialTitleWords },
+  ),
+)
 
 /**
  * Convert a string into a slug

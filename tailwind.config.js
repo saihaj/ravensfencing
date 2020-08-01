@@ -25,7 +25,16 @@ module.exports = {
           h2: {
             color: '#ffffff',
           },
+          h3: {
+            color: '#ffffff',
+          },
           h4: {
+            color: '#ffffff',
+          },
+          h5: {
+            color: '#ffffff',
+          },
+          h6: {
             color: '#ffffff',
           },
           thead: {
@@ -38,6 +47,10 @@ module.exports = {
             '&:hover': {
               color: '#ffffff',
             },
+          },
+          strong: {
+            color: theme( 'colors.primary.red' ),
+            fontWeight: 900,
           },
           p: {
             fontSize: '1.05rem',
