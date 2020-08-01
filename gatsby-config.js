@@ -53,6 +53,16 @@ module.exports = {
     },
     {
       resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images-anywhere',
+            options: {
+              staticDir: 'src/images',
+            },
+          },
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',

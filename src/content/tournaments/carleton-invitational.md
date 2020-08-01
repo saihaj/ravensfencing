@@ -13,7 +13,7 @@ keywords: Varsity Team, goravens, OUA fencing, 2020 CUFC Tournament
 #### Online Payment!<br/>
 We are going to try offering a method for online payment in addition to cash at the door.  After registering if you want you can pay your entry free online by visting this link:  https://ravensfencing.square.site/
 
-Checkout the poster:
+Checkout the poster [here](/uploads/CI-2020.pdf):
 <object data="/uploads/CI-2020.pdf" type="application/pdf" height="500px">
     <embed src="/uploads/CI-2020.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/uploads/CI-2020.pdf">Download PDF</a>.</p>

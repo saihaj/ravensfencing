@@ -40,4 +40,5 @@ export const tournamentsKeywords = [
 
 export const SpecialTitleWords = [
   'The ApSimon Cup',
+  'ODFC',
 ]

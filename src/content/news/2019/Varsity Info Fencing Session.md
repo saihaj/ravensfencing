@@ -4,7 +4,7 @@ layout: News
 author: Joomla! Administrator
 date: 2019-09-03 #YYYY-MM-DD
 category: Varsity
-keywords: Varsity team 2020, info session fencing
+keywords: Varsity team 2019, info session fencing
 ---
 
 To all varsity team hopefuls,

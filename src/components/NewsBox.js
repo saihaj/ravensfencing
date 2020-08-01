@@ -4,6 +4,8 @@ import { string } from 'prop-types'
 import title from 'title'
 import { motion } from 'framer-motion'
 
+import { SpecialTitleWords } from '../lib/keywords'
+
 const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
   <motion.div
     className="h-full border-2 border-secondary-grey rounded-lg overflow-hidden"
@@ -12,7 +14,9 @@ const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
 
     <div className="p-6">
 
-      <h1 className="title-font text-xl font-medium text-white mb-3">{title( newsTitle )}</h1>
+      <h1 className="title-font text-xl font-medium text-white mb-3">
+        {title( newsTitle, { special: SpecialTitleWords } )}
+      </h1>
 
       <p className="leading-relaxed mb-3">{excerpt}</p>
 
