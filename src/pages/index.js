@@ -81,7 +81,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section className=" py-12">
+      <section className="pt-8">
         <TwitterFeed userName="RavensFencing" />
       </section>
 
