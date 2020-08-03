@@ -3,7 +3,7 @@ title: Varsity Student Expo
 layout: News
 author: Joomla! Administrator
 date: 2019-09-03 #YYYY-MM-DD
-category: General
+category: Varsity
 keywords: CU Expo, 2019 season
 ---
 
