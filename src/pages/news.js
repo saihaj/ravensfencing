@@ -6,12 +6,13 @@ import Layout from '../components/Layout'
 import NewsBox from '../components/NewsBox'
 import { newsKeywords } from '../lib/keywords'
 
-const NewsListing = ( { title, permalink, excerpt } ) => (
+const NewsListing = ( { title, permalink, excerpt, date } ) => (
   <div className="p-4 md:w-1/3">
     <NewsBox
       newsTitle={title}
       permalink={permalink}
       excerpt={excerpt}
+      date={date}
     />
   </div>
 )
@@ -20,6 +21,7 @@ NewsListing.propTypes = {
   title: string.isRequired,
   permalink: string.isRequired,
   excerpt: string.isRequired,
+  date: string.isRequired,
 }
 
 const News = () => {
@@ -38,6 +40,7 @@ const News = () => {
           }
           frontmatter {
             title
+            date (formatString: "MMM DD, YYYY")
           }
         }
       }
@@ -54,7 +57,7 @@ const News = () => {
           {data.map( ( { node: {
             id,
             excerpt,
-            frontmatter: { title },
+            frontmatter: { title, date },
             fields: { slug },
           } } ) => (
             <NewsListing
@@ -62,6 +65,7 @@ const News = () => {
               title={title}
               excerpt={excerpt}
               permalink={slug}
+              date={date}
             />
           ) )}
 

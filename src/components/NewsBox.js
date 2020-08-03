@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 import { SpecialTitleWords } from '../lib/keywords'
 
-const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
+const NewsBox = ( { newsTitle, permalink, excerpt, date } ) => (
   <motion.div
     className="h-full border-2 border-secondary-grey rounded-lg overflow-hidden"
     whileHover={{ scale: 1.01 }}
@@ -20,35 +20,42 @@ const NewsBox = ( { newsTitle, permalink, excerpt } ) => (
 
       <p className="leading-relaxed mb-3">{excerpt}</p>
 
-      <div className="flex items-center flex-wrap">
+      <div className="flex justify-between">
 
-        <Link
-          to={permalink}
-          className="text-primary-red"
-        >
-          <motion.div
-            className="inline-flex items-center md:mb-2 lg:mb-0"
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.95 }}
+        <div className="flex items-center flex-wrap">
+
+          <Link
+            to={permalink}
+            className="text-primary-red"
           >
-            Learn More
-            <svg
-              className="w-4 h-4 ml-2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            <motion.div
+              className="inline-flex items-center md:mb-2 lg:mb-0"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <path d="M5 12h14" />
-              <path d="M12 5l7 7-7 7" />
-            </svg>
-          </motion.div>
-        </Link>
+              Learn More
+              <svg
+                className="w-4 h-4 ml-2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
+            </motion.div>
+          </Link>
+
+        </div>
+
+        <div className="text-sm text-secondary-grey">
+          {date}
+        </div>
 
       </div>
-
     </div>
 
   </motion.div>
@@ -58,6 +65,11 @@ NewsBox.propTypes = {
   newsTitle: string.isRequired,
   permalink: string.isRequired,
   excerpt: string.isRequired,
+  date: string,
+}
+
+NewsBox.defaultProps = {
+  date: undefined,
 }
 
 export default NewsBox
