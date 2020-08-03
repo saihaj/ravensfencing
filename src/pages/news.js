@@ -49,7 +49,7 @@ FilterButton.propTypes = {
   initialState: bool.isRequired,
 }
 
-const FilteredNewsResults = ( { newsResults } ) => (
+export const FilteredNewsResults = ( { newsResults } ) => (
   <div className="flex flex-wrap">
     { newsResults.edges.map( ( { node: {
       id,

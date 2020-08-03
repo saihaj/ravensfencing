@@ -2,10 +2,10 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import NewsBox from '../components/NewsBox'
 import SlideShow from '../components/SlideShow'
 import TwitterFeed from '../components/TwitterFeed'
 import { BASE_KEYWORDS } from '../lib/keywords'
+import { FilteredNewsResults as NewsListing } from './news'
 
 const IndexPage = () => {
   const { slideshowImages, topNews } = useStaticQuery( graphql`
@@ -32,26 +32,14 @@ const IndexPage = () => {
       }
     }
     topNews: allMarkdownRemark(
-        filter: {
-          frontmatter: { layout: { eq: "News" } }
-        },
-        sort: {
-          fields: frontmatter___date,
-          order: DESC
-        },
+        filter: { frontmatter: { layout: { eq: "News" } } },
+        sort: { fields: frontmatter___date, order: DESC },
         limit: 3
         ) {
       edges {
-          node {
-            id
-            excerpt( format: PLAIN, truncate: true, pruneLength: 100 )
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-            }
-          }
+        node {
+          ...NewsFragment
+        }
       }
     }
   }
@@ -71,18 +59,7 @@ const IndexPage = () => {
       <section className="text-gray-600 body-font">
         <div className="container mx-auto">
           <div className="flex flex-wrap -m-4">
-
-            {topNews.edges.map( ( { node: {
-              id,
-              excerpt,
-              frontmatter: { title },
-              fields: { slug },
-            } } ) => (
-              <div key={id} className="p-4 md:w-1/3">
-                <NewsBox newsTitle={title} permalink={slug} excerpt={excerpt} />
-              </div>
-            ) )}
-
+            <NewsListing newsResults={topNews} />
           </div>
         </div>
       </section>
