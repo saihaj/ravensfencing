@@ -1,0 +1,80 @@
+backend:
+    name: github
+    repo: saihaj/ravensfencing
+    squash_merges: true
+    commit_messages:
+      create: "feat(content): create {{slug}}"
+      update: "feat(content): update {{slug}}"
+      delete: |+
+        feat(content): delete {{slug}}
+        BREAKING CHANGE
+      uploadMedia: "feat(media): upload {{path}}"
+      deleteMedia: |+
+        feat(media): delete {{path}}
+        BREAKING CHANGE
+
+media_folder: static/uploads
+public_folder: /images
+publish_mode: editorial_workflow
+
+collections:
+    - label: News
+      name: news
+      folder: src/content/news
+      path: "{{slug}}/index"
+      create: true
+      fields:
+        - { label: Template Key, name: layout, widget: hidden, default: News }
+        - { label: Title, name: title, widget: string }
+        - { label: Category, name: category, widget: select, options: ['General', 'Varsity'] }
+        - { label: Author, name: author, widget: string }
+        - { label: Publish Date, name: date, widget: datetime, dateFormat: 'YYYY.MM.DD' }
+        - { label: SEO Keywords, name: keywords, widget: string }
+        - { label: Body, name: body, widget: markdown }
+
+    - label: Tournaments
+      name: tournaments
+      folder: src/content/tournaments
+      fields:
+        - { label: Template Key, name: layout, widget: hidden, default: Default }
+        - { label: Title, name: title, widget: string }
+        - { label: SEO Keywords, name: keywords, widget: string }
+        - { label: Body, name: body, widget: markdown }
+
+    - label: Programs
+      name: programs
+      folder: src/content/programs
+      fields:
+        - { label: Template Key, name: layout, widget: hidden, default: Default }
+        - { label: Title, name: title, widget: string }
+        - { label: SEO Keywords, name: keywords, widget: string }
+        - { label: Body, name: body, widget: markdown }
+
+    - label: Coach Bios
+      name: coaches
+      folder: src/content/coaches
+      fields:
+        - { label: Template Key, name: layout, widget: hidden, default: Coaches }
+        - { label: Title, name: title, widget: string }
+        - { label: Role, name: role, widget: select, options: ['Head Coach', 'Assistant Coach'] }
+        - { label: SEO Keywords, name: keywords, widget: string }
+        - { label: Body, name: body, widget: markdown }
+
+    - label: Site Pages/Sections
+      name: sections-pages
+      files:
+        - file: src/content/about-us.md
+          name: about-us
+          label: About Us Section (homepage)
+          fields:
+            - { label: Title, name: title, widget: hidden, default: About Us }
+            - { label: About Us, name: body, widget: markdown }
+
+        - file: src/content/membership.md
+          name: membership
+          label: Membership Page
+          fields:
+            - { label: Template Key, name: layout, widget: hidden, default: Default }
+            - { label: Title, name: title, widget: string }
+            - { label: SEO Keywords, name: keywords, widget: string }
+            - { label: Body, name: body, widget: markdown }

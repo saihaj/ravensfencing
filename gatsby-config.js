@@ -77,5 +77,6 @@ module.exports = {
     //     develop: true,
     //   },
     // },
+    'gatsby-plugin-netlify-cms', // make sure to keep it last in the array
   ],
 }
