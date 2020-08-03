@@ -8,7 +8,7 @@ import { BASE_KEYWORDS } from '../lib/keywords'
 import { FilteredNewsResults as NewsListing } from './news'
 
 const IndexPage = () => {
-  const { slideshowImages, topNews } = useStaticQuery( graphql`
+  const { slideshowImages, topNews, aboutUsSection } = useStaticQuery( graphql`
   query HomePageSections {
     slideshowImages: allFile (
       filter: {
@@ -42,6 +42,9 @@ const IndexPage = () => {
         }
       }
     }
+    aboutUsSection: markdownRemark( frontmatter: { title: { eq: "About Us" } } ) {
+      html
+    }
   }
 ` )
 
@@ -56,8 +59,22 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section className="text-gray-600 body-font">
-        <div className="container mx-auto">
+      <section className="py-12">
+        <div className="p-2 container mx-auto border-2 border-secondary-grey rounded-lg">
+          <h1 className="pt-2 text-5xl font-bold text-center">
+            About Us
+          </h1>
+          <p className="text-2xl m-4">
+            <div dangerouslySetInnerHTML={{ __html: aboutUsSection.html }} />
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h1 className="pb-2 text-5xl font-bold text-center">
+          Latest News
+        </h1>
+        <div className="container mx-auto text-gray-600 body-font">
           <div className="flex flex-wrap -m-4">
             <NewsListing newsResults={topNews} />
           </div>

@@ -49,6 +49,7 @@
       {
         "requireForBlockBody": false
       }
-      ]
-    }
+    ],
+    "react/no-danger": "off"
+  }
 }
