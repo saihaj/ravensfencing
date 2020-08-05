@@ -46,7 +46,7 @@ const Template = ( {
         />
 
         <div className="flex flex-col my-auto text-center md:text-left">
-          <h1 className="text-5xl font-bold">{title}</h1>
+          <h1 className="text-5xl font-bold font-viga">{title}</h1>
           <h3 className="text-2xl font-medium">{role}</h3>
         </div>
       </div>

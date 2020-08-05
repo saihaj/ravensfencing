@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        viga: [ 'Viga' ],
+        andika: [ 'Andika' ],
+      },
       colors: {
         primary: {
           red: '#cf112d',
@@ -21,6 +25,7 @@ module.exports = {
           h1: {
             color: '#ffffff',
             fontWight: '900',
+            fontFamily: 'Viga',
           },
           h2: {
             color: '#ffffff',

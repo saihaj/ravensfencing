@@ -14,7 +14,7 @@ const NewsBox = ( { newsTitle, permalink, excerpt, date } ) => (
 
     <div className="p-6">
 
-      <h1 className="title-font text-xl font-medium text-white mb-3">
+      <h1 className="title-font text-xl font-medium text-white mb-3 font-viga">
         {title( newsTitle, { special: SpecialTitleWords } )}
       </h1>
 

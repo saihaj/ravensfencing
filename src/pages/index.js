@@ -62,7 +62,7 @@ const IndexPage = () => {
 
       <section className="pt-12">
         <div className="px-2 py-8 container mx-auto border-t-2 border-b-2 border-secondary-grey">
-          <h1 className="text-5xl font-bold text-center">
+          <h1 className="text-5xl font-bold text-center font-viga">
             About Us
           </h1>
           <p className="text-2xl m-4">
@@ -73,7 +73,7 @@ const IndexPage = () => {
 
       <section className="pb-12">
         <div className="px-2 py-8 container mx-auto border-b-2 border-secondary-grey">
-          <h1 className="text-5xl font-bold text-center">
+          <h1 className="text-5xl font-bold text-center font-viga">
             Coaches
           </h1>
 
@@ -82,7 +82,7 @@ const IndexPage = () => {
       </section>
 
       <section>
-        <h1 className="pb-2 text-5xl font-bold text-center">
+        <h1 className="pb-2 text-5xl font-bold text-center font-viga">
           Latest News
         </h1>
         <div className="container mx-auto text-gray-600 body-font">

@@ -70,6 +70,16 @@ module.exports = {
         trackingId: 'UA-164560585-3',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Viga',
+          'Andika',
+        ],
+        display: 'swap',
+      },
+    },
     // {
     //   resolve: 'gatsby-plugin-purgecss',
     //   options: {

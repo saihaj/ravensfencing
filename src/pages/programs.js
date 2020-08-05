@@ -23,7 +23,7 @@ const ImageBox = ( { name, image } ) => (
 
         <div className="p-2 text-center">
 
-          <h1 className="text-2xl">
+          <h1 className="text-2xl font-viga">
             { processTitle( name ) }
           </h1>
 

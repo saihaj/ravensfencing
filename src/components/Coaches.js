@@ -23,7 +23,7 @@ const CoachCard = ( { name, image } ) => (
         alt={`Image of Coach ${processTitle( name )}`}
       />
 
-      <h1 className="title-font text-3xl font-bold text-center text-white">
+      <h1 className="title-font text-3xl font-bold text-center text-white font-viga">
         {processTitle( name )}
       </h1>
     </motion.div>

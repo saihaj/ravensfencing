@@ -15,7 +15,7 @@ const Layout = ( { children, seoTitle, seoKeywords, customStyles } ) => (
 
     <main
       className={cx(
-        'flex-1 w-full max-w-6xl px-4 py-8 mx-auto md:px-8 md:py-16',
+        'flex-1 w-full max-w-6xl px-4 py-8 mx-auto md:px-8 md:py-16 font-andika',
         `${customStyles}`,
       )}
     >

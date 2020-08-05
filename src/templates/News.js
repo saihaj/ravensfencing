@@ -29,7 +29,7 @@ const Template = ( {
 } ) => (
   <Layout seoTitle={title} seoKeywords={[ ...BASE_KEYWORDS, keywords ]}>
 
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto font-viga">
       <h1 className="text-5xl font-extrabold">{title}</h1>
       <p className="text-sm pb-3 text-right">{`${date} by ${author}`}</p>
       <hr />

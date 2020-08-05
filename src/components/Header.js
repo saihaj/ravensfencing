@@ -18,7 +18,7 @@ const Header = () => {
   }, [ width ] )
 
   return (
-    <header className="bg-primary-red">
+    <header className="bg-primary-red font-viga">
 
       <nav className="max-w-6xl flex flex-wrap items-center justify-between px-5 py-3 md:px-10 mx-auto">
 
