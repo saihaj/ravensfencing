@@ -21,29 +21,14 @@ module.exports = {
     typography: theme => ( {
       default: {
         css: {
+          fontSize: '1.35rem',
           color: '#ffffff',
-          h1: {
+          'h1, h2, h3, h4, h5, h6, thead': {
             color: '#ffffff',
+          },
+          h1: {
             fontWight: '900',
             fontFamily: 'Viga',
-          },
-          h2: {
-            color: '#ffffff',
-          },
-          h3: {
-            color: '#ffffff',
-          },
-          h4: {
-            color: '#ffffff',
-          },
-          h5: {
-            color: '#ffffff',
-          },
-          h6: {
-            color: '#ffffff',
-          },
-          thead: {
-            color: '#ffffff',
           },
           a: {
             color: theme( 'colors.primary.red' ),
@@ -58,7 +43,6 @@ module.exports = {
             fontWeight: 900,
           },
           p: {
-            fontSize: '1.05rem',
             lineHeight: 1.4,
           },
           li: {
