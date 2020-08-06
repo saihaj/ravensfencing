@@ -44,7 +44,10 @@ const IndexPage = () => {
       }
     }
     aboutUsSection: markdownRemark( frontmatter: { title: { eq: "About Us" } } ) {
-      html
+      html,
+      frontmatter {
+        title
+      }
     }
   }
 ` )
@@ -63,7 +66,7 @@ const IndexPage = () => {
       <section className="pt-12">
         <div className="px-2 py-8 container mx-auto border-t-2 border-b-2 border-secondary-grey">
           <h1 className="text-5xl font-bold text-center font-viga">
-            About Us
+            {aboutUsSection.frontmatter.title}
           </h1>
           <p className="text-2xl m-4">
             <div dangerouslySetInnerHTML={{ __html: aboutUsSection.html }} />
@@ -76,7 +79,6 @@ const IndexPage = () => {
           <h1 className="text-5xl font-bold text-center font-viga">
             Coaches
           </h1>
-
           <Coaches />
         </div>
       </section>
