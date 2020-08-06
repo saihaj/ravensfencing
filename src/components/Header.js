@@ -24,7 +24,7 @@ const Header = () => {
 
         <Link to="/">
           <motion.h1
-            className="flex items-center text-white no-underline mb-2 md:mb-0"
+            className="flex items-center text-white no-underline md:mb-0"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
           >
