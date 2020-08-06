@@ -22,7 +22,7 @@ module.exports = {
         start_url: '/',
         background_color: fullConfig.theme.colors.black,
         theme_color: fullConfig.theme.colors.primary.red,
-        icon: 'src/images/tailwind-icon.png',
+        icon: 'src/images/ravens-icon.png',
       },
     },
     {
